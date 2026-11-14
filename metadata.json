@@ -1,0 +1,6 @@
+{
+  "name": "Zenith Notes",
+  "description": "Minimalist, distraction-free notes application rooted in Japanese Ma negative space and Swiss typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
