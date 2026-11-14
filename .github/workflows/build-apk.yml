@@ -15,11 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: Prepare debug signing keystore
         run: |
@@ -45,7 +45,7 @@ jobs:
           gradle-version: '9.3.1'
 
       - name: Run tests and assemble Debug APK
-        run: gradle :app:testDebugUnitTest :app:assembleDebug
+        run: gradle :app:testDebugUnitTest :app:assembleDebug --stacktrace
 
       - name: Upload Debug APK artifact
         uses: actions/upload-artifact@v4
